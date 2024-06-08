@@ -8,11 +8,8 @@ func Sum(n []int) int {
 	return sum
 }
 func SumAll(slices ...[]int) []int {
-	// get the length of the parameter slices
 	lenOfNum := len(slices)
-	// make a new []int slice with starting capacity of lenOfNum
 	sums := make([]int, lenOfNum)
-	// sum the currect slice in the loop and put it to the sums[i]
 	for i, slice := range slices {
 		sums[i] = Sum(slice)
 	}
